@@ -7,10 +7,13 @@
     text-align:center;
     font-size: 700%;
     font-family: Comic Sans MS;
+    cursor: url('bunnyCursor.png'), auto;
 
 }
 
-nmMedCaption
+.nmMedCaption
 {
-font-size: 500%
+font-size: 50%;
+position:relative;
+top: -75px
 }
