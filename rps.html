@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Game | Rock Paper Scissors</title>
+
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="description" content="play rock paper scissors" />
+<meta name="keywords" content="game, rock, paper, scissors" />
+<meta name="author" content="Krystyn Bondad />
+<meta name="revised" content="10/8/2023" />
+
+<script type="text/JavaScript">
+<!--
+
+function playGame()
+{
+   var response= null;
+   var choice, result, randomChoice = "";
+   var youWin= "You won this game!";
+   var iWin= "I won this game!";
+   var randomIndex= Math.floor(Math.random()* 3);
+   
+   
+   if(myForm.myChoice[0].checked)
+      choice= "rock";
+      
+   if(myForm.myChoice[1].checked)
+      choice="paper";
+
+   if(myForm.myChoice[2].checked)
+      choice="scissors";
+
+
+
+   switch(randomIndex) {
+      case 0: randomChoice="rock"; break;
+      case 1: randomChoice="paper"; break;
+      default: randomChoice="scissors"; 
+   }
+
+   if(choice==randomChoice)
+      result="The game is a draw!";
+   
+   else if((choice=="rock" && randomChoice=="scissors") || (choice=="scissors" && randomChoice=="paper") || (choice=="paper" && randomChoice=="rock"))
+      result= youWin;
+      
+   else
+      result= iWin;
+
+   response = "You chose " + choice + "!<br /><br />" + "I chose " + randomChoice + "!<br /><br />" + result + "<br /><br />" + "Please left mouse click on the web browser's reload button to replay game!";
+      
+
+   document.write("<div style=\"font-size: 150%\">" + response + "</div>");
+
+         
+   
+} // end playGame()
+
+// -->
+
+</script>
+
+</head>
+
+<body>
+
+<div>
+Let us play the game 
+<span style="font-style: italic">Rock, Paper, Scissors</span>  
+<br /><br />
+</div>
+
+<div>
+Please make a selection
+<br /><br />
+</div>
+
+<form id="myForm" action="JavaScript:playGame()">
+
+<div>
+<input type="radio" name="myChoice" value="rock" checked="checked" /> Rock <br />
+<input type="radio" name="myChoice" value="paper"  /> Paper <br />
+<input type="radio" name="myChoice" value="scissors"  /> Scissors <br /><br />
+</div>
+
+<div>
+<input type="submit" name="Submit" />
+<input type="reset" name="Reset" />
+</div>
+
+</form>
+
+</body>
+
+</html>
